@@ -192,8 +192,8 @@ module XeroRuby
       status_validator = EnumAttributeValidator.new('String', ["ACTIVE", "DELETED", "ARCHIVED"])
       return false unless status_validator.valid?(@status)
       return false if @report_tax_type.nil?
-      report_tax_type_validator = EnumAttributeValidator.new('String', ["OUTPUT", "INPUT", "EXEMPTOUTPUT", "INPUTTAXED", "BASEXCLUDED", "EXEMPTEXPENSES", "EXEMPTINPUT", "EXEMPTCAPITAL", "EXEMPTEXPORT", "CAPITALEXINPUT", "ECOUTPUT", "ECOUTPUTSERVICES", "ECINPUT", "ECACQUISITIONS", "CAPITALSALESOUTPUT", "CAPITALEXPENSESINPUT", "MOSSSALES", "NONE", "GSTONCAPITALIMPORTS", "GSTONCAPIMPORTS", "GSTONIMPORTS", "AVALARA"])
-      return false unless report_tax_type_validator.valid?(@report_tax_type)
+      # report_tax_type_validator = EnumAttributeValidator.new('String', ["OUTPUT", "INPUT", "EXEMPTOUTPUT", "INPUTTAXED", "BASEXCLUDED", "EXEMPTEXPENSES", "EXEMPTINPUT", "EXEMPTCAPITAL", "EXEMPTEXPORT", "CAPITALEXINPUT", "ECOUTPUT", "ECOUTPUTSERVICES", "ECINPUT", "ECACQUISITIONS", "CAPITALSALESOUTPUT", "CAPITALEXPENSESINPUT", "MOSSSALES", "NONE", "GSTONCAPITALIMPORTS", "GSTONCAPIMPORTS", "GSTONIMPORTS", "AVALARA"])
+      # return false unless report_tax_type_validator.valid?(@report_tax_type)
       true
     end
 
