@@ -2315,7 +2315,8 @@ module XeroRuby
         fail ArgumentError, "Missing the required parameter 'invoices' when calling AccountingApi.create_invoices"
       end
       # resource path
-      local_var_path = '/Invoices#bulk'
+      # local_var_path = '/Invoices#bulk'
+      local_var_path = '/Invoices'
 
       # query parameters
       query_params = opts[:query_params] || {}
