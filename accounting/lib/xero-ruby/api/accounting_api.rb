@@ -1297,7 +1297,8 @@ module XeroRuby
         fail ArgumentError, "Missing the required parameter 'contacts' when calling AccountingApi.create_contacts"
       end
       # resource path
-      local_var_path = '/Contacts#bulk'
+      # local_var_path = '/Contacts#bulk'
+      local_var_path = '/Contacts'
 
       # query parameters
       query_params = opts[:query_params] || {}
