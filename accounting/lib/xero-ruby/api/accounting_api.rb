@@ -1669,7 +1669,8 @@ module XeroRuby
         fail ArgumentError, "Missing the required parameter 'credit_notes' when calling AccountingApi.create_credit_notes"
       end
       # resource path
-      local_var_path = '/CreditNotes#bulk'
+      # local_var_path = '/CreditNotes#bulk'
+      local_var_path = '/CreditNotes'
 
       # query parameters
       query_params = opts[:query_params] || {}
