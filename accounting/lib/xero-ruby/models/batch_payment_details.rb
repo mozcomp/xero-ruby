@@ -93,8 +93,8 @@ module XeroRuby
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@details.nil? && @details.to_s.length > 24
-        invalid_properties.push('invalid value for "details", the character length must be smaller than or equal to 18.')
+      if !@details.nil? && @details.to_s.length > 40
+        invalid_properties.push('invalid value for "details", the character length must be smaller than or equal to 40.')
       end
 
       if !@code.nil? && @code.to_s.length > 12
@@ -111,7 +111,7 @@ module XeroRuby
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@details.nil? && @details.to_s.length > 24
+      return false if !@details.nil? && @details.to_s.length > 40
       return false if !@code.nil? && @code.to_s.length > 12
       return false if !@reference.nil? && @reference.to_s.length > 12
       true
@@ -120,7 +120,7 @@ module XeroRuby
     # Custom attribute writer method with validation
     # @param [Object] details Value to be assigned
     def details=(details)
-      if !details.nil? && details.to_s.length > 24
+      if !details.nil? && details.to_s.length > 40
         fail ArgumentError, 'invalid value for "details", the character length must be smaller than or equal to 18.'
       end
 
